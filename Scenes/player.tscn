@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://kiyac42wiy4c"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_w45fa"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_byqxm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wptks"]
+size = Vector2(24, 24)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_w45fa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(2.38419e-07, -4.76837e-07)
+scale = Vector2(24, 24)
+mesh = SubResource("QuadMesh_byqxm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wptks")
